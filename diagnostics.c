@@ -1,35 +1,33 @@
 
-/**  ============================================
- **
- **    Diagnostics - graphics and printed output
- **
- **  ============================================
- **/
+/*********************************************************
+ **							**
+ **	Diagnostics - graphics and printed output	**
+ **							**
+ *********************************************************/
 
 #include "es.h"
 
 void diagnostics(void)
 {
 
+    /* write run information to terminal */
 
-   /*  write run information to terminal */
+    if (i_time % iout == 0) 
+    {
+        printf("timestep: %d\n", i_time);
+    }
 
-   if (itime % iout == 0) 
-     {
-       printf("timestep: %d\n", itime);
-     }
+    /* do graphics snapshots */
 
-   /*  do graphics snapshots */
+    if (i_time % igraph == 0) 
+    {
+        plots();
+    }
 
-   if (itime % igraph == 0) 
-     {
-       plots();
-      }
-
-   /*  write out time-dep. quantities to file */
+    /* write out time-dep. quantities to file */
  
-   if (itime % ihist == 0) 
-     {
-      histories(); 
-     }
+    if (i_time % ihist == 0) 
+    {
+        histories(); 
+    }
 }

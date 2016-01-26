@@ -1,10 +1,11 @@
-/**  
- **       es.h
- **
- ** Header file for pices.c 
- ** containing global arrays and variables
- **
- **/
+/*************************************************  
+ **						**
+ **			es.h			**
+ **						**
+ ** 	Header file for pices.c 		**
+ ** 	containing global arrays and variables	**
+ ** 						**
+ *************************************************/
 
 #include <stdio.h>
 #include <math.h>
@@ -12,8 +13,8 @@
    
 #define pi 3.14159265
 #define random_max 2147483647   /* max. allowed integer (32-bit) */
-#define NP_MAX 5001             /* max. # particles */
-#define NX_MAX 501              /* max. # grid points */
+#define NP_MAX 100001             /* max. # particles */
+#define NX_MAX 1001              /* max. # grid points */
 
 /* particle arrays */ 
 
