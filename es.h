@@ -26,6 +26,7 @@
  float rho[NX_MAX];             /* electron density */
  float Ex[NX_MAX];              /* electric field */ 
  float phi[NX_MAX];             /* potential */
+ float phi_50[120];
 
 /* plasma constants, parameters */
 

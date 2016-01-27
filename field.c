@@ -56,5 +56,6 @@ void field(void)
     {
 	phi[j] = phi[j+1] + 0.5*( Ex[j] + Ex[j+1] )*dx;
     }
+    phi_50[i_time] = phi[50];
 }
  

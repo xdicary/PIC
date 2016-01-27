@@ -71,6 +71,7 @@ void init(void)
     printf("# particles/cell = %d\n", ncell);
     printf("grid length = %f\n\n", grid_length);
 
+    /*
     int k;
     int r[5];
     for (k=0; k<5; k++)
@@ -78,6 +79,7 @@ void init(void)
     printf("Random_Max = %d\n", random_max);
     for (k=0; k<5; k++)
     {printf("Random_now = %d\n", r[k]);}
+    */
 
     printf("\nthermal velocity = %f\n",vte);
     printf("mesh size = %f\n",dx);
