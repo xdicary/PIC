@@ -19,6 +19,7 @@ extern void push(void);			/* particle pusher */
 extern void boundaries(void);		/* particle boundary conditions */
 extern void diagnostics(void);		/* diagnostic routine */
 extern void phiplots(void);
+extern void input(void);
 
 FILE *history_file;			/* file for writing out time histories */            
 
@@ -27,9 +28,9 @@ int main()
 
     int i;
 
-    i_time = 0;
-
     history_file = fopen("hist.data", "w");
+
+    input();
 
     init();				/* do initialisation */
 

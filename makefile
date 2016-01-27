@@ -22,13 +22,13 @@ FC = cc
 #  sources
 
 SRCS =  espic.c init.c  loadx.c  loadv.c density.c  field.c diagnostics.c \
-        plots.c  push.c  boundaries.c histories.c phiplots.c
+        plots.c  push.c  boundaries.c histories.c phiplots.c input.c
 
 
 #  objects
 
 OBJS = espic.o  init.o  loadx.o loadv.o  density.o  field.o diagnostics.o \
-       plots.o  push.o boundaries.o  histories.o phiplots.o
+       plots.o  push.o boundaries.o  histories.o phiplots.o input.o
 
 #  rules for compiling objects
 

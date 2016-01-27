@@ -15,6 +15,10 @@
 #define random_max 2147483647   /* max. allowed integer (32-bit) */
 #define NP_MAX 100001             /* max. # particles */
 #define NX_MAX 1001              /* max. # grid points */
+#define Q = 1.602e-19
+#define Me = 9.109e-31
+#define K = 1.381e-23
+#define EPS0 = 8.854e-12
 
 /* particle arrays */ 
 
