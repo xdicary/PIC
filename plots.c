@@ -34,7 +34,7 @@ void plots(void)
 
    for (j=0; j<=nx; j++)
    {
-       fprintf( plot_file, "%f  %f\n" ,xgrid[j],-rho[j] );
+       fprintf( plot_file, "%f	%f	%f\n" ,xgrid[j],-rho[j],rhot[j] );
    }
 
    fclose(plot_file);
@@ -42,12 +42,12 @@ void plots(void)
 
    /* electrostatic field */
 
-   sprintf(cfile,"field%d.data", isnap ); 
+   sprintf(cfile,"phie%d.data", isnap ); 
    plot_file = fopen(cfile, "w");
 
    for (j=0; j<=nx; j++)
    {
-        fprintf( plot_file, "%f  %f\n" ,xgrid[j],Ex[j] );
+        fprintf( plot_file, "%f	%f	%f\n" ,xgrid[j],phi[j],Ex[j] );
    }
 
    fclose(plot_file);

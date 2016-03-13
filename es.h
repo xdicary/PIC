@@ -28,9 +28,11 @@
 /* grid arrays */
 
  float rho[NX_MAX];             /* electron density */
+ float rhot[NX_MAX];		/* net density */
  float Ex[NX_MAX];              /* electric field */ 
  float phi[NX_MAX];             /* potential */
- float phi_50[120];
+ float Ex_50[1000];
+ float phi_50[1000];
 
 /* plasma constants, parameters */
 
@@ -56,7 +58,7 @@
  int  i_time;                   /* current timestep */
  float  dt;                     /* timestep */
 
- int  nx;                       /* # grid points */
+ long  nx;                       /* # grid points */
  float  dx;                     /* mesh size */
 
  int  bc_particle;              /* particle boundary condition switch */

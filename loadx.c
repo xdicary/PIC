@@ -38,7 +38,7 @@ void loadx(void)
 
     /* pseudo-particle charge normalised to give ncrit=1 (rhoc=-1) */
 
-    qe = -rho0*dpx;
+    qe = -rho0*dpx; 
 
     /* pseudo-particle mass (need for kinetic energy diagnostic) */
 
