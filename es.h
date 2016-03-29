@@ -12,8 +12,9 @@
 #include <time.h>
    
 #define pi 3.14159265
+#define exp 2.71828185
 #define random_max 2147483647   /* max. allowed integer (32-bit) */
-#define NP_MAX 100001             /* max. # particles */
+#define NP_MAX 1000001             /* max. # particles */
 #define NX_MAX 1001              /* max. # grid points */
 #define Q = 1.602e-19
 #define Me = 9.109e-31
@@ -23,7 +24,8 @@
 /* particle arrays */ 
 
  float x[NP_MAX];               /* position */
- float vx[NP_MAX];              /* velocity */ 
+ float vm[NP_MAX];              /* velocity */ 
+ float vx[NP_MAX];		/* velocity_x */
 
 /* grid arrays */
 

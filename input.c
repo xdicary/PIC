@@ -4,7 +4,7 @@ void input(void)
 {
     /* set up simulation parameters */
 
-    nt = 500;			/* # timesteps  */
+    nt = 1000;			/* # timesteps  */
     nx = 100;                   /* # grid points */
 
     ne = 100000;		/* # electrons   */
@@ -18,7 +18,7 @@ void input(void)
     q_over_me = -1;             /* electron charge:mass ratio */
 
     rho0 = 1.0;			/* background ion density */
-    vte = 3.0;			/* thermal velocity */
+    vte = 1.4;			/* thermal velocity */
 
     bc_field = 1;               /* field boundary conditions:  1 = periodic, */
                                 /*                             2 = reflective */
