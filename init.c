@@ -17,7 +17,17 @@ void init(void)
     /* local variables */
 
     int ncell;
-    float xdodx;
+    double xdodx;
+
+    double x[ne];
+    double vm[ne];
+    double vx[ne];
+    double rho[nx];
+    double rhot[nx];
+    double Ex[nx];
+    double phi[nx];
+    double Ex_50[nt];
+    double phi_50[nt];
 
 
     i_time = 0;		 	/* initialise time counter */

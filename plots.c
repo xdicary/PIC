@@ -15,7 +15,7 @@ int isnap = 0;                	/* counts number of calls to routine 'plots' */
 void plots(void)
 {
 
-    float xgrid[NX_MAX];    	/* grid work array */
+    double xgrid[NX_MAX];    	/* grid work array */
 
     char cfile[40];         	/* plot filename string */
 

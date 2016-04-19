@@ -13,9 +13,9 @@ void push(void)
 
     /* locals */
 
-    float xa;			/* fractional particle position */
-    float b1, b2;		/* linear weights */
-    float exi;			/* interpolated e-field */
+    double xa;			/* fractional particle position */
+    double b1, b2;		/* linear weights */
+    double exi;			/* interpolated e-field */
     int i, j1, j2;		/* grid indices */
 
     for( i=1; i<=ne; i++)

@@ -2,8 +2,8 @@
  **						**
  **			es.h			**
  **						**
- ** 	Header file for pices.c 		**
- ** 	containing global arrays and variables	**
+ ** 	      Header file for espic.c 		**
+ **    containing global arrays and variables	**
  ** 						**
  *************************************************/
 
@@ -14,8 +14,6 @@
 #define pi 3.14159265
 #define exp 2.71828185
 #define random_max 2147483647   /* max. allowed integer (32-bit) */
-#define NP_MAX 1000001             /* max. # particles */
-#define NX_MAX 1001              /* max. # grid points */
 #define Q = 1.602e-19
 #define Me = 9.109e-31
 #define K = 1.381e-23
@@ -23,34 +21,35 @@
 
 /* particle arrays */ 
 
- float x[NP_MAX];               /* position */
- float vm[NP_MAX];              /* velocity */ 
- float vx[NP_MAX];		/* velocity_x */
+extern double x[];		/* position */
+extern double vm[];		/* velocity */
+extern double vx[];		/* velocity_x */
 
 /* grid arrays */
 
- float rho[NX_MAX];             /* electron density */
- float rhot[NX_MAX];		/* net density */
- float Ex[NX_MAX];              /* electric field */ 
- float phi[NX_MAX];             /* potential */
- float Ex_50[1000];
- float phi_50[1000];
+extern double rho[];		/* electron density */
+extern double rhot[];		/* net density */
+extern double Ex[];		/* electric field */
+extern double phi[];		/* potential */
+
+extern double Ex_50[];
+extern double phi_50[];
 
 /* plasma constants, parameters */
 
- float qe;                      /* macro-electron charge */
- float vte;                     /* thermal velocity */
- float q_over_me;               /* charge/mass ratio */
- float e_mass;                  /* macro-electron mass */
- float xload;                   /* plasma length */
- float plasma_start;            /* LH edge of plasma */
- float plasma_end;              /* RH edge of plasma */
- float wall_left;               /* LH particle boundary */
- float wall_right;              /* RH particle boundary */
- float rho0;                    /* background (ion) density */
- float grid_length;             /* grid length */
- float omega_p;                 /* plasma frequency */
- float lambda_d;                /* Debye-length */ 
+ double qe;                      /* macro-electron charge */
+ double vte;                     /* thermal velocity */
+ double q_over_me;               /* charge/mass ratio */
+ double e_mass;                  /* macro-electron mass */
+ double xload;                   /* plasma length */
+ double plasma_start;            /* LH edge of plasma */
+ double plasma_end;              /* RH edge of plasma */
+ double wall_left;               /* LH particle boundary */
+ double wall_right;              /* RH particle boundary */
+ double rho0;                    /* background (ion) density */
+ double grid_length;             /* grid length */
+ double omega_p;                 /* plasma frequency */
+ double lambda_d;                /* Debye-length */ 
 
  int ne, ni;                    /* # simulation electrons, ions */
 
@@ -58,10 +57,10 @@
 
  int  nt;                       /* # timesteps */
  int  i_time;                   /* current timestep */
- float  dt;                     /* timestep */
+ double  dt;                     /* timestep */
 
  long  nx;                       /* # grid points */
- float  dx;                     /* mesh size */
+ double  dx;                     /* mesh size */
 
  int  bc_particle;              /* particle boundary condition switch */
  int  bc_field;                 /* field boundary condition */

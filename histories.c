@@ -14,7 +14,7 @@ void histories(void)
 {
 
     int i;
-    float ukin;
+    double ukin;
 
     /* kinetic energy */
  

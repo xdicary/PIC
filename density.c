@@ -8,7 +8,7 @@
 
 void density(void)
 {
-    float re, xa, f1, f2;
+    double re, xa, f1, f2;
     int i, j, j1, j2, iwl, iwr;
 
     re = qe/dx;			/*  charge weighting factor */

@@ -8,11 +8,11 @@
 
 void tdma(void)
 {
-    float a[nx];
-    float b[nx+1];
-    float c[nx];
+    double a[nx];
+    double b[nx+1];
+    double c[nx];
     int i;
-    float m;
+    double m;
 
     for (i=0; i<nx; i++)
 	a[i] = -1.0;

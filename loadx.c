@@ -9,7 +9,7 @@
 
 /* local variables */
 
-float dpx;					/* particle spacing */ 
+double dpx;					/* particle spacing */ 
 int i;						/* counter */
 
 void loadx(void)
