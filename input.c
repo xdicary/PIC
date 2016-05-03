@@ -11,10 +11,10 @@ void input(void)
 {
     /* set up simulation parameters */
 
-    nt = 1000;			/* # timesteps  */
+    nt = 2000;			/* # timesteps  */
     nx = 100;                   /* # grid points */
 
-    ne = 100000;		/* # electrons   */
+    ne = 102000;		/* # electrons   */
     ni = 0;                     /* # ions (fixed) */
 
     grid_length = 100.0;        /* size of spatial grid */

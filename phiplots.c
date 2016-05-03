@@ -33,4 +33,6 @@ void phiplots(void)
     {
 	fprintf(plot_file, "%f	%f\n", vm[i], vx[i]);
     }
+
+    fclose(plot_file);
 }
