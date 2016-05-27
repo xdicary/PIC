@@ -16,19 +16,24 @@ void init(void)
 
     /* local variables */
 
+    int i;
+
     int ncell;
     double xdodx;
 
-    double x[ne];
+/*    double x[ne];
     double vm[ne];
     double vx[ne];
+
     double rho[nx];
     double rhot[nx];
     double Ex[nx];
     double phi[nx];
+    double pphi[nx];
+
     double Ex_50[nt];
     double phi_50[nt];
-
+*/
 
     i_time = 0;		 	/* initialise time counter */
 
@@ -44,6 +49,9 @@ void init(void)
     xdodx = lambda_d/dx;	/* ratio */
 
     ncell = ne/nx;		/* # particles per cell */
+
+    for (i=0; i<nx; i++)
+	pphi[i] = 0.0;
 
     /* printf("time: %f, x: %f, y: %f\n", time, x, y); */  
 

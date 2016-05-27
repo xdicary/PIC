@@ -21,19 +21,30 @@
 
 /* particle arrays */ 
 
-extern double x[];		/* position */
-extern double vm[];		/* velocity */
-extern double vx[];		/* velocity_x */
+/* extern double x[];		/* position */
+/* extern double vm[];		/* velocity */
+/* extern double vx[];		/* velocity_x */
+double x[50001];
+double vm[50001];
+double vx[50001];
 
 /* grid arrays */
 
-extern double rho[];		/* electron density */
-extern double rhot[];		/* net density */
-extern double Ex[];		/* electric field */
-extern double phi[];		/* potential */
+/* extern double rho[];		/* electron density */
+/* extern double rhot[];		/* net density */
+/* extern double Ex[];		/* electric field */
+/* extern double phi[];		/* potential */
+/* extern double pphi[];		/* perturbation potential */
+double rho[101];
+double rhot[101];
+double Ex[101];
+double phi[101];
+double pphi[101];
 
-extern double Ex_50[];
-extern double phi_50[];
+/* extern double Ex_50[];*/
+/* extern double phi_50[];*/
+double Ex_50[2001];
+double phi_50[2001];
 
 /* plasma constants, parameters */
 
@@ -64,6 +75,8 @@ extern double phi_50[];
 
  int  bc_particle;              /* particle boundary condition switch */
  int  bc_field;                 /* field boundary condition */
+
+ int perturbation_switch;
 
 /* diagnostic parameters */
  

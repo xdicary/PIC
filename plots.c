@@ -15,6 +15,8 @@ int isnap = 0;                	/* counts number of calls to routine 'plots' */
 void plots(void)
 {
 
+    double phip[nx];
+
     double xgrid[nx];    	/* grid work array */
 
     char cfile[40];         	/* plot filename string */
@@ -47,7 +49,7 @@ void plots(void)
 
     for (j=0; j<=nx; j++)
     {
-	fprintf( plot_file, "%f	%f	%f\n" ,xgrid[j],phi[j],Ex[j] );
+	fprintf( plot_file, "%f	%f	%f	%f\n" ,xgrid[j],phi[j],Ex[j],pphi[j] );
     }
 
     fclose(plot_file);

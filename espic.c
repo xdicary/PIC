@@ -20,6 +20,8 @@ extern void boundaries(void);		/* particle boundary conditions */
 extern void diagnostics(void);		/* diagnostic routine */
 extern void phiplots(void);
 extern void input(void);
+extern void perturbation(void);
+
 
 FILE *history_file;			/* file for writing out time histories */            
 
@@ -39,6 +41,8 @@ int main()
     loadv();				/* define velocity distribution */
 
     density();				/* compute initial density from particles */
+
+    perturbation();	
 
     field();				/* compute initial electric field */
 
