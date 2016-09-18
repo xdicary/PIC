@@ -36,7 +36,7 @@ void plots(void)
 
     for (j=0; j<=nx; j++)
     {
-	fprintf( plot_file, "%f	%f	%f\n" ,xgrid[j],-rho[j],rhot[j] );
+	fprintf( plot_file, "%f	%f	%f\n" ,xgrid[j],-rhoall[j],rhot[j] );
     }
 
     fclose(plot_file);
@@ -57,16 +57,25 @@ void plots(void)
     sprintf(cfile,"vt%d.data", isnap );
     plot_file = fopen(cfile, "w");
 
-    for (j=1; j<=ne; j++)
+    for (j=0; j<ne; j++)
     {
         if( vx[j]>=0 )
 	    fprintf( plot_file, "%f\n" , vx[j]);
 	else
 	    fprintf( plot_file, "%f\n" , -vx[j]);
     }
+    if ( energic_particle != 0 )
+    {
+    for (j=0; j<ne_EP; j++)
+    {
+	if( vx_EP[j]>=0 )
+            fprintf( plot_file, "%f\n" , vx_EP[j]);
+        else
+            fprintf( plot_file, "%f\n" , -vx_EP[j]);
+    }
+    }
 
     fclose(plot_file);
-
 
     isnap++;        	       /* increment snapshot counter */
 

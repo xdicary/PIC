@@ -6,7 +6,7 @@
 
 #include "es.h"
 
-void tdma(void)
+void tdma(double rhot[])
 {
     double a[nx];
     double b[nx+1];
