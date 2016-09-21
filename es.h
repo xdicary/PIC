@@ -18,35 +18,28 @@
 #define Me = 9.109e-31
 #define K = 1.381e-23
 #define EPS0 = 8.854e-12
-#define Mi_over_Me = 1836
-#define sqrtioe = 42.8486
 
 #define MaxParticle 50001
-#define MaxEP 5001
 #define MaxGrid 101
-#define MaxTimestep 3001
+#define MaxTime 2001
+
 
 /* particle arrays */ 
 
-double x[MaxParticle];		/* position */
-double vm[MaxParticle];		/* velocity */
-double vx[MaxParticle];		/* velocity_x */
-
-double x_EP[MaxEP];		/* position of EP */
-double vx_EP[MaxEP];		/* velocity_x of EP */
+double x[MaxParticle];
+double vm[MaxParticle];
+double vx[MaxParticle];
 
 /* grid arrays */
 
-double rho1[MaxGrid];		/* electron density */
-double rho2[MaxGrid];		/* EP density*/
-double rhoall[MaxGrid];		/* density of all */
-double rhot[MaxGrid];		/* net density */
-double Ex[MaxGrid];		/* electric field */
-double phi[MaxGrid];		/* potential */
-double pphi[MaxGrid];		/* perturbation potential */
+double rho[MaxGrid];
+double rhot[MaxGrid];
+double Ex[MaxGrid];
+double phi[MaxGrid];
+double pphi[MaxGrid];
 
-double Ex_50[MaxTimestep];
-double phi_50[MaxTimestep];
+double Ex_50[MaxTime];
+double phi_50[MaxTime];
 
 /* plasma constants, parameters */
 
@@ -66,8 +59,6 @@ double phi_50[MaxTimestep];
 
  int ne, ni;                    /* # simulation electrons, ions */
 
- int ne_EP, ni_EP;
-
 /* grid variables */
 
  int  nt;                       /* # timesteps */
@@ -80,7 +71,6 @@ double phi_50[MaxTimestep];
  int  bc_particle;              /* particle boundary condition switch */
  int  bc_field;                 /* field boundary condition */
 
- int energic_particle;
  int perturbation_switch;
 
 /* diagnostic parameters */

@@ -25,10 +25,9 @@ void diagnostics(void)
     }
 
     /* write out time-dep. quantities to file */
- /*
+ 
     if (i_time % ihist == 0) 
     {
         histories(); 
     }
-*/
 }

@@ -9,7 +9,7 @@
 #FFLAGS = -w -O2
 
 # with debug option
-FFLAGS = -w -g -O0
+FFLAGS = -w -g
 
 # math library
 
@@ -21,13 +21,13 @@ FC = cc
 
 #  sources
 
-SRCS =  espic.c init.c  loadx.c  loadv.c  loadv_EP.c  density.c  field.c diagnostics.c \
+SRCS =  espic.c init.c  loadx.c  loadv.c density.c  field.c diagnostics.c \
         plots.c  push.c  boundaries.c histories.c phiplots.c input.c tdma.c perturbation.c
 
 
 #  objects
 
-OBJS = espic.o  init.o  loadx.o  loadv.o  loadv_EP.o  density.o  field.o diagnostics.o \
+OBJS = espic.o  init.o  loadx.o loadv.o  density.o  field.o diagnostics.o \
        plots.o  push.o boundaries.o  histories.o phiplots.o input.o tdma.o perturbation.o
 
 #  rules for compiling objects

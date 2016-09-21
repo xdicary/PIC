@@ -14,11 +14,8 @@ void input(void)
     nt = 2000;			/* # timesteps  */
     nx = 100;                   /* # grid points */
 
-    ne = 50000;			/* # electrons   */
+    ne = 50000;		/* # electrons   */
     ni = 0;                     /* # ions (fixed) */
-
-    ne_EP = 5000;			/* # EP */
-    ni_EP = 0;
 
     grid_length = 100.0;        /* size of spatial grid */
     plasma_start = 0.;          /* plasma edge */
@@ -27,13 +24,8 @@ void input(void)
 
     q_over_me = -1;             /* electron charge:mass ratio */
 
-
     rho0 = 1.0;			/* background ion density */
     vte = 1.0;			/* thermal velocity */
-
-    energic_particle = 1;	/* 0 = no energic particles,	*/
-				/* 1 = energic electrons,	*/
-				/* 2 = energic ions		*/
 
     perturbation_switch = 0;	/* 0 = no perturbation, 			*/
 				/* 1 = perturbation on initial density,		*/

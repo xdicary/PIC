@@ -29,7 +29,7 @@ void phiplots(void)
 
     plot_file = fopen(cfile,"w");
 
-    for (i=0; i<ne; i++)
+    for (i=1; i<=ne; i++)
     {
 	fprintf(plot_file, "%f	%f\n", vm[i], vx[i]);
     }

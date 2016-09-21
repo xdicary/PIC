@@ -8,20 +8,20 @@
 #include "es.h"
 #include "math.h"
 
-extern void tdma(double[]);
+extern void tdma(void);
 
-void field(double rhoall[])
+void field(void)
 {
     int j;
 
     /* Add neutral background to get net density */
  
     for (j=0; j<=nx; j++)
-	rhot[j] = rhoall[j] + rho0;
+	rhot[j] = rho[j] + rho0;
 
     /* Use tridiagonal matrix algorithm to solve Poisson equation and work out the potential from the density of charge */
 
-    tdma(rhot);
+    tdma();
 
     if ( perturbation_switch == 2 )
     {
