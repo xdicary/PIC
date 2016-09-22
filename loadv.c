@@ -50,8 +50,8 @@ void loadv(void)
 	for (j=0; j<2; j++)
 	    a[j] = (double) random() / random_max;
 
-	vx[i] = sqrt(-log(a[0]))*cos(2*pi*a[1]);
-	vx[i+1] = sqrt(-log(a[0]))*sin(2*pi*a[1]);
+	vx[i] = sqrt(-vte*vte*log(a[0]))*cos(2*vte*vte*pi*a[1]);
+	vx[i+1] = sqrt(-vte*vte*log(a[0]))*sin(2*vte*vte*pi*a[1]);
 
     }
 
