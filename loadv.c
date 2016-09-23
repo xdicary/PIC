@@ -15,7 +15,7 @@ void loadv(void)
     int i, j;
     double a[2], b, x, rs, theta;
 
-    for (i = 1; i<ne; i=i+2)
+    for (i = 0; i<ne; i=i+2)
     {
 
 /*	if ( i%10 == 0 )

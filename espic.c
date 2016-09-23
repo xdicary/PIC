@@ -13,10 +13,12 @@
 extern void init(void);			/* initialisation */ 
 extern void loadx(void);		/* particle loading - positions */
 extern void loadv(void);		/* particle loading - velocities */
+extern void loadx_EP(void);
+extern void loadv_EP(void);
 extern void density(void);		/* density gather */
 extern void field(void);		/* Poisson solver */
-extern void push(void);			/* particle pusher */
-extern void boundaries(void);		/* particle boundary conditions */
+extern void push(int, double[], double[], double[]);			/* particle pusher */
+extern void boundaries(int, double[], double[]);		/* particle boundary conditions */
 extern void diagnostics(void);		/* diagnostic routine */
 extern void phiplots(void);
 extern void input(void);
@@ -40,6 +42,13 @@ int main()
 
     loadv();				/* define velocity distribution */
 
+    if (energic_particle != 0)
+    {
+	loadx_EP();
+
+	loadv_EP();
+    }
+
     density();				/* compute initial density from particles */
 
     perturbation();	
@@ -52,9 +61,16 @@ int main()
     for (i_time=1; i_time<=nt; i_time++) 
     {
 
-        push();				/* push particles */
+        push(ne, x, Ex, vx);				/* push particles */
 
-        boundaries();			/* particle boundary conditions */
+        boundaries(ne, x, vx);			/* particle boundary conditions */
+
+        if (energic_particle != 0)
+        {
+            push(ne_EP, x_EP, Ex, vx_EP);
+
+            boundaries(ne_EP, x_EP, vx_EP);
+        }
 
         density();			/* compute density */
 

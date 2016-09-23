@@ -8,7 +8,7 @@
 
 #include "es.h"
 
-void push(void)
+void push(int ne, double x[], double Ex[], double vx[])
 {
 
     /* locals */
@@ -18,7 +18,7 @@ void push(void)
     double exi;			/* interpolated e-field */
     int i, j1, j2;		/* grid indices */
 
-    for( i=1; i<=ne; i++)
+    for( i=0; i<ne; i++)
     {
 
         /* interpolate field Ex from grid to particle */
@@ -38,7 +38,7 @@ void push(void)
 
     /*  update positions (2nd half of leap-frog) */
 
-    for( i=1; i<=ne; i++)
+    for( i=0; i<ne; i++)
     {
         x[i] = x[i] + dt*vx[i];
     }

@@ -6,7 +6,7 @@
 
 #include "es.h"
 
-void boundaries(void)
+void boundaries(int ne, double x[], double vx[])
 {
    
     int iseed1 = 28631;		/* random number seed */
@@ -22,7 +22,7 @@ void boundaries(void)
          left simulation region: if so, we put them back again
          according to the switch 'bc_particle' **/
 
-    for ( i=1; i<=ne; i++)
+    for ( i=0; i<ne; i++)
     {
 
         switch (bc_particle) 

@@ -18,29 +18,15 @@ void init(void)
 
     int i;
 
-    int ncell;
+    int ncell, epcell;
     double xdodx;
-
-/*    double x[ne];
-    double vm[ne];
-    double vx[ne];
-
-    double rho[nx];
-    double rhot[nx];
-    double Ex[nx];
-    double phi[nx];
-    double pphi[nx];
-
-    double Ex_50[nt];
-    double phi_50[nt];
-*/
 
     i_time = 0;		 	/* initialise time counter */
 
 
     /* derived parameters */
 
-    dx = grid_length/nx;	/*  mesh size */
+    dx = grid_length/nx;	/* mesh size */
 
     omega_p = sqrt(rho0);	/* plasma frequency */
 
@@ -50,26 +36,26 @@ void init(void)
 
     ncell = ne/nx;		/* # particles per cell */
 
-    for (i=0; i<nx; i++)
+    epcell = ne_EP/nx;
+
+    for (i=0; i<=nx; i++)
 	pphi[i] = 0.0;
+
 
     /* printf("time: %f, x: %f, y: %f\n", time, x, y); */  
 
     printf("\n Input parameters: \n\n");
-    printf("# particles = %d\n", ne);
     printf("# mesh points = %d\n", nx);
-    printf("# particles/cell = %d\n", ncell);
-    printf("grid length = %f\n\n", grid_length);
+    printf("# plasma particles = %d\n", ne);
+    printf("# plasma particles/cell = %d\n", ncell);
 
-    /*
-    int k;
-    int r[5];
-    for (k=0; k<5; k++)
-    {r[k] = random();}
-    printf("Random_Max = %d\n", random_max);
-    for (k=0; k<5; k++)
-    {printf("Random_now = %d\n", r[k]);}
-    */
+    if (energic_particle != 0)
+    {
+	printf("# EP = %d\n", ne_EP);
+	printf("# EP/cell = %d\n", epcell);
+    }
+
+    printf("grid length = %f\n\n", grid_length);
 
     printf("\nthermal velocity = %f\n",vte);
     printf("mesh size = %f\n",dx);

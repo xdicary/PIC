@@ -19,9 +19,10 @@
 #define K = 1.381e-23
 #define EPS0 = 8.854e-12
 
-#define MaxParticle 50001
-#define MaxGrid 101
-#define MaxTime 2001
+#define MaxParticle 60000
+#define MaxEP 6000
+#define MaxGrid 200
+#define MaxTime 3000
 
 
 /* particle arrays */ 
@@ -30,9 +31,14 @@ double x[MaxParticle];
 double vm[MaxParticle];
 double vx[MaxParticle];
 
+double x_EP[MaxParticle];
+double vx_EP[MaxEP];
+
 /* grid arrays */
 
-double rho[MaxGrid];
+double rho_plasma[MaxGrid];
+double rho_EP[MaxGrid];
+double rho_all[MaxGrid];
 double rhot[MaxGrid];
 double Ex[MaxGrid];
 double phi[MaxGrid];
@@ -58,6 +64,8 @@ double phi_50[MaxTime];
  double lambda_d;                /* Debye-length */ 
 
  int ne, ni;                    /* # simulation electrons, ions */
+ int ne_EP, ni_EP;
+
 
 /* grid variables */
 
@@ -72,6 +80,7 @@ double phi_50[MaxTime];
  int  bc_field;                 /* field boundary condition */
 
  int perturbation_switch;
+ int energic_particle;
 
 /* diagnostic parameters */
  

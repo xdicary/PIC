@@ -17,7 +17,7 @@ void field(void)
     /* Add neutral background to get net density */
  
     for (j=0; j<=nx; j++)
-	rhot[j] = rho[j] + rho0;
+	rhot[j] = rho_all[j] + rho0;
 
     /* Use tridiagonal matrix algorithm to solve Poisson equation and work out the potential from the density of charge */
 

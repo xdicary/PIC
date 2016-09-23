@@ -46,7 +46,7 @@ void loadx(void)
 
     /* set up initial positions */
 
-    for (i = 1; i <= ne; i++)
+    for (i = 0; i < ne; i++)
     { 
         x[i] = plasma_start + dpx*(i-0.5);
     }
