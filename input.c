@@ -23,7 +23,7 @@ void input(void)
     grid_length = 100.0;        /* size of spatial grid */
     plasma_start = 0.;          /* plasma edge */
 
-    dt = 0.02;			/* normalised timestep */
+    dt = 0.005;			/* normalised timestep */
 
     q_over_me = -1;             /* electron charge:mass ratio */
 
@@ -31,7 +31,7 @@ void input(void)
     vte = 1.0;			/* thermal velocity */
 
 
-    energic_particle = 1;       /* 0 = no energic particles,    */
+    energic_particle = 0;       /* 0 = no energic particles,    */
                                 /* 1 = energic electrons,       */
                                 /* 2 = energic ions             */
 

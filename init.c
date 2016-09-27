@@ -26,6 +26,8 @@ void init(void)
 
     /* derived parameters */
 
+/*    dt = dt*2*pi;*/
+
     dx = grid_length/nx;	/* mesh size */
 
     omega_p = sqrt(rho0);	/* plasma frequency */
@@ -64,5 +66,7 @@ void init(void)
     printf("timestep = %f\n",dt);
     printf("# timesteps = %d\n", nt);
     printf("run time = %f\n",dt*nt);
+
+    dt = dt*2*pi;
 
 }
