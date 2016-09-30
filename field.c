@@ -12,7 +12,7 @@ extern void tdma(void);
 
 void field(void)
 {
-    int j;
+    int j, x_midpoint;
 
     /* Add neutral background to get net density */
  
@@ -73,9 +73,22 @@ void field(void)
 
     Ex[nx] = Ex[nx-1];
 */
-    /* Record E&phi at the 50th grid  */
+    /* Record E&phi at midgrid  */
 
-    Ex_50[i_time] = Ex[50];
-    phi_50[i_time] = phi[50];
+    x_midpoint = nx/2;
+    Ex_mid[i_time] = Ex[x_midpoint];
+    phi_mid[i_time] = phi[x_midpoint];
+
+    for ( j=0; j<=nx; j++ )
+	Energy_E[i_time] = Energy_E[i_time] + Ex[j]*Ex[j];
+
+    for ( j=0; j<ne; j++ )
+	Energy_P[i_time] = Energy_P[i_time] + vx[j]*vx[j];
+
+if (i_time == 10)
+printf("sss");
+
+    TotalEnergy[i_time] = Energy_E[i_time] + 0.002*Energy_P[i_time];
+
 }
  

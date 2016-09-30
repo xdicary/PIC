@@ -19,10 +19,10 @@
 #define K = 1.381e-23
 #define EPS0 = 8.854e-12
 
-#define MaxParticle 60000
-#define MaxEP 6000
-#define MaxGrid 200
-#define MaxTime 3000
+#define MaxParticle 100001
+#define MaxEP 6001
+#define MaxGrid 301
+#define MaxTime 20001
 
 
 /* particle arrays */ 
@@ -44,8 +44,12 @@ double Ex[MaxGrid];
 double phi[MaxGrid];
 double pphi[MaxGrid];
 
-double Ex_50[MaxTime];
-double phi_50[MaxTime];
+double Ex_mid[MaxTime];
+double phi_mid[MaxTime];
+
+double Energy_E[MaxTime];
+double Energy_P[MaxTime];
+double TotalEnergy[MaxTime];
 
 /* plasma constants, parameters */
 

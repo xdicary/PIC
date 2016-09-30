@@ -59,10 +59,15 @@ void plots(void)
 
     for (j=0; j<ne; j++)
     {
-        if( vx[j]>=0 )
+/*        if( vx[j]>=0 )
 	    fprintf( plot_file, "%f\n" , vx[j]);
 	else
 	    fprintf( plot_file, "%f\n" , -vx[j]);
+*/
+
+	fprintf( plot_file, "%f\n", vx[j]);
+
+
     }
 
     if ( energic_particle != 0 )

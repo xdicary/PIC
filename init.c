@@ -43,6 +43,12 @@ void init(void)
     for (i=0; i<=nx; i++)
 	pphi[i] = 0.0;
 
+    for ( i=0; i<=nt; i++ )
+    {
+	Energy_P[i] = 0.0;
+	Energy_E[i] = 0.0;
+	TotalEnergy[i] = 0.0;
+    }
 
     /* printf("time: %f, x: %f, y: %f\n", time, x, y); */  
 

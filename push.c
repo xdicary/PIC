@@ -18,9 +18,16 @@ void push(int ne, double x[], double Ex[], double vx[])
     double exi;			/* interpolated e-field */
     int i, j1, j2;		/* grid indices */
 
+
+
+    if ( i_time == 1 )
+    {
+	for ( i=0; i<ne; i++ )
+	    x[i] = x[i] + 0.5*dt*vx[i];
+    }
+
     for( i=0; i<ne; i++)
     {
-
         /* interpolate field Ex from grid to particle */
 
         xa = x[i]/dx;
