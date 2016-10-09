@@ -21,8 +21,8 @@
 
 #define MaxParticle 100001
 #define MaxEP 6001
-#define MaxGrid 301
-#define MaxTime 20001
+#define MaxGrid 401
+#define MaxTime 60001
 
 
 /* particle arrays */ 

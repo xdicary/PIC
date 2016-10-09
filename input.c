@@ -23,7 +23,7 @@ void input(void)
     grid_length = 100.0;        /* size of spatial grid */
     plasma_start = 0.;          /* plasma edge */
 
-    dt = 0.005;			/* normalised timestep */
+    dt = 0.02;			/* normalised timestep */
 
     q_over_me = -1;             /* electron charge:mass ratio */
 
@@ -48,6 +48,6 @@ void input(void)
                                 /*                3 = thermal */
 
     ihist = 1;                  /* frequency of time-history output */
-    igraph = 500;                /* freq. of graphical snapshots */
+    igraph = 100;                /* freq. of graphical snapshots */
     iout = 100;			/* freq. of printed diags. */
 }

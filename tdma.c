@@ -18,19 +18,18 @@ void tdma(void)
 	a[i] = -1.0;
     a[nx] = 0.0;
 
-    b[0] = 1.0;
     for (i=0; i<=nx; i++)
 	b[i] = 2.0;
     b[nx+1] = 1.0;
 
-    c[0] = -1.0;
     for (i=1; i<=nx; i++)
-	c[i] = 0.0;
+	c[i] = -1.0;
 
-    phi[0] = 0.0;
-    for(i=1; i<nx; i++)
-        phi[i] = rhot[i];
+
+    for(i=0; i<nx; i++)
+        phi[i] = rhot[i]*dx*dx;
     phi[nx] = 0.0;
+
 
     for (i=1; i<nx; i++)
     {

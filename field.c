@@ -61,12 +61,12 @@ void field(void)
 
     /* Field is calculated by central difference */
 
-    Ex[0] = ( phi[0] - phi[1] )/dx;
+    Ex[0] = 0.5*( phi[nx-1] - phi[1] )/dx;
 
     for (j=1; j<=nx-1; j++)
         Ex[j] = 0.5*( phi[j-1] - phi[j+1] )/dx;
 
-    Ex[nx] = ( phi[nx-1] - phi[nx] )/dx;
+    Ex[nx] = Ex[0];
 
 /*    for (j=0; j<nx; j++)
 	Ex[j] = ( phi[j+1] - phi[j] )/dx;
@@ -84,9 +84,6 @@ void field(void)
 
     for ( j=0; j<ne; j++ )
 	Energy_P[i_time] = Energy_P[i_time] + vx[j]*vx[j];
-
-if (i_time == 10)
-printf("sss");
 
     TotalEnergy[i_time] = Energy_E[i_time] + 0.002*Energy_P[i_time];
 
