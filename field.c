@@ -68,10 +68,11 @@ void field(void)
 
     Ex[nx] = Ex[0];
 
-/*    for (j=0; j<nx; j++)
-	Ex[j] = ( phi[j+1] - phi[j] )/dx;
+/*
+    for (j=0; j<nx; j++)
+	Ex[j] = ( phi[j] - phi[j+1] )/dx;
 
-    Ex[nx] = Ex[nx-1];
+    Ex[nx] = ( phi[nx] - phi[1] )/dx;
 */
     /* Record E&phi at midgrid  */
 
@@ -85,7 +86,21 @@ void field(void)
     for ( j=0; j<ne; j++ )
 	Energy_P[i_time] = Energy_P[i_time] + vx[j]*vx[j];
 
-    TotalEnergy[i_time] = Energy_E[i_time] + 0.002*Energy_P[i_time];
+    TotalEnergy[i_time] = 0.0*Energy_E[i_time] + 0.5*Energy_P[i_time];
+
+    for ( j=0; j<5; j++)
+	x_time[j][i_time] = x[ne/10+j*ne/5+0];
+
+    if ( energic_particle != 0 )
+    {
+	for ( j=0; j<5; j++)
+	    x_EP_time[j][i_time] = x_EP[ne_EP/10+j*ne_EP/5];
+
+    for ( j=0; j<ne_EP; j++ )
+        Energy_P_EP[i_time] = Energy_P_EP[i_time] + vx_EP[j]*vx_EP[j];
+
+    }
 
 }
+
  

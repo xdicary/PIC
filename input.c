@@ -11,10 +11,10 @@ void input(void)
 {
     /* set up simulation parameters */
 
-    nt = 2000;			/* # timesteps  */
-    nx = 100;                   /* # grid points */
+    nt = 50000;			/* # timesteps  */
+    nx = 500;                   /* # grid points */
 
-    ne = 50000;		/* # electrons   */
+    ne = 100000;		/* # electrons   */
     ni = 0;                     /* # ions (fixed) */
 
     ne_EP = 5000;
@@ -23,7 +23,7 @@ void input(void)
     grid_length = 100.0;        /* size of spatial grid */
     plasma_start = 0.;          /* plasma edge */
 
-    dt = 0.02;			/* normalised timestep */
+    dt = 0.01;			/* normalised timestep */
 
     q_over_me = -1;             /* electron charge:mass ratio */
 
@@ -48,6 +48,6 @@ void input(void)
                                 /*                3 = thermal */
 
     ihist = 1;                  /* frequency of time-history output */
-    igraph = 100;                /* freq. of graphical snapshots */
-    iout = 100;			/* freq. of printed diags. */
+    igraph = 5000;                /* freq. of graphical snapshots */
+    iout = 1000;			/* freq. of printed diags. */
 }

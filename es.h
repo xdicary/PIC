@@ -21,7 +21,7 @@
 
 #define MaxParticle 100001
 #define MaxEP 6001
-#define MaxGrid 401
+#define MaxGrid 1001
 #define MaxTime 60001
 
 
@@ -33,6 +33,9 @@ double vx[MaxParticle];
 
 double x_EP[MaxParticle];
 double vx_EP[MaxEP];
+
+double x_time[5][MaxTime];
+double x_EP_time[5][MaxTime];
 
 /* grid arrays */
 
@@ -49,6 +52,7 @@ double phi_mid[MaxTime];
 
 double Energy_E[MaxTime];
 double Energy_P[MaxTime];
+double Energy_P_EP[MaxTime];
 double TotalEnergy[MaxTime];
 
 /* plasma constants, parameters */

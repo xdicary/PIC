@@ -12,7 +12,7 @@
 double dpx;					/* particle spacing */ 
 int i;						/* counter */
 
-void loadx(void)
+void loadx(int ne, double x[])
 {
     if (bc_particle >= 2)
     {

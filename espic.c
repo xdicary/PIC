@@ -11,7 +11,7 @@
 /*  external routines  */
 
 extern void init(void);			/* initialisation */ 
-extern void loadx(void);		/* particle loading - positions */
+extern void loadx(int, double[]);		/* particle loading - positions */
 extern void loadv(void);		/* particle loading - velocities */
 extern void loadx_EP(void);
 extern void loadv_EP(void);
@@ -38,7 +38,7 @@ int main()
 
     init();				/* do initialisation */
 
-    loadx();				/* load particles onto grid */
+    loadx(ne, x);				/* load particles onto grid */
 
     loadv();				/* define velocity distribution */
 
