@@ -19,9 +19,9 @@
 #define K = 1.381e-23
 #define EPS0 = 8.854e-12
 
-#define MaxParticle 100001
-#define MaxEP 6001
-#define MaxGrid 1001
+#define MaxParticle 500001
+#define MaxEP 500001
+#define MaxGrid 2001
 #define MaxTime 60001
 
 
@@ -70,6 +70,9 @@ double TotalEnergy[MaxTime];
  double grid_length;             /* grid length */
  double omega_p;                 /* plasma frequency */
  double lambda_d;                /* Debye-length */ 
+ double weighting_EP;
+
+ double v_EP;
 
  int ne, ni;                    /* # simulation electrons, ions */
  int ne_EP, ni_EP;

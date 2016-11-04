@@ -14,7 +14,7 @@ void density(void)
     re = qe/dx;			/*  charge weighting factor */
 
     if (energic_particle != 0)
-	re = re*ne/(ne+ne_EP);
+	re = re*ne/(ne+ne_EP/weighting_EP);
      
     for (j=0; j<=nx+1; j++) 
     {
@@ -45,8 +45,8 @@ void density(void)
             j2 = j1 + 1;
             f2 = xa - j1;
             f1 = 1.0 - f2;
-            rho_EP[j1] = rho_EP[j1] + re*f1;
-            rho_EP[j2] = rho_EP[j2] + re*f2;
+            rho_EP[j1] = rho_EP[j1] + re*f1/weighting_EP;
+            rho_EP[j2] = rho_EP[j2] + re*f2/weighting_EP;
         }
     }
 
