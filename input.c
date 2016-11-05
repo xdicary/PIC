@@ -17,12 +17,12 @@ void input(void)
     ne = 250000;		/* # electrons   */
     ni = 0;                     /* # ions (fixed) */
 
-    ne_EP = 25000;
+    ne_EP = 50000;
     ni_EP = 0;
 
     weighting_EP = 1.0;
 
-    v_EP = 10.0;
+    v_EP = 4.0;
 
     grid_length = 200.0;        /* size of spatial grid */
     plasma_start = 0.;          /* plasma edge */
