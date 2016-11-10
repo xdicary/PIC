@@ -17,7 +17,7 @@ void input(void)
     ne = 250000;		/* # electrons   */
     ni = 0;                     /* # ions (fixed) */
 
-    ne_EP = 50000;
+    ne_EP = 25000;
     ni_EP = 0;
 
     weighting_EP = 1.0;
